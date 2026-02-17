@@ -5,17 +5,17 @@
   --bg-950: #ffffff;
   --bg-900: #f5f7fa;
   --bg-800: #e9eef4;
-  --text-100: #1a2332;
-  --text-300: #4a5568;
+  --text-100: #123140;
+  --text-300: #4b6570;
   --text-500: #6b7280;
-  --gold-500: #d67b19;
-  --gold-400: #e89134;
-  --gold-300: #f5a855;
+  --gold-500: #0f7e9b;
+  --gold-400: #13a1c4;
+  --gold-300: #3db5d1;
 
   --surface: rgba(255, 255, 255, 0.95);
   --surface-alt: rgba(249, 250, 251, 0.9);
-  --border: rgba(214, 123, 25, 0.24);
-  --shadow-lg: 0 16px 30px rgba(0, 0, 0, 0.08);
+  --border: #c8dbe3;
+  --shadow-lg: 0 12px 24px rgba(12, 54, 68, 0.12);
 }
 
 * {
@@ -31,7 +31,10 @@ body {
 body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--text-100);
-  background: radial-gradient(circle at 12% 9%, #e8f0f7 0%, #f2f5f8 40%, #ffffff 100%);
+  background:
+    radial-gradient(1200px 700px at 8% 2%, rgba(19, 143, 176, 0.18), transparent 62%),
+    radial-gradient(900px 600px at 92% 98%, rgba(220, 132, 32, 0.18), transparent 66%),
+    linear-gradient(165deg, #e9f4fb, #fff4dd);
   line-height: 1.45;
 }
 
@@ -39,8 +42,8 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: linear-gradient(rgba(214, 123, 25, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(214, 123, 25, 0.06) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(15, 126, 155, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 126, 155, 0.06) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: radial-gradient(circle at center, black 42%, transparent 95%);
 }
@@ -140,7 +143,7 @@ button:disabled {
 }
 
 button.ghost {
-  background: rgba(214, 123, 25, 0.1);
+  background: rgba(15, 126, 155, 0.1);
   color: var(--text-100);
 }
 
