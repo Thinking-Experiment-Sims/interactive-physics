@@ -6,7 +6,6 @@
     <title>Physics Simulations - The Thinking Experiment</title>
     <meta name="description" content="Interactive physics simulations for teaching and learning">
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Shared Theme System -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vladimirlopez/shared-simulation-style-system@main/themes/dark-refraction-theme.css" id="theme-link">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,243 +16,226 @@
             <p class="kicker">The Thinking Experiment</p>
             <h1>Physics Simulations</h1>
             <p class="subtitle">Interactive tools for teaching and learning</p>
-            <button id="theme-toggle" class="ghost" style="margin-top: 0.8rem;">
+            <button id="theme-toggle" class="ghost theme-toggle-btn">
                 <span id="theme-icon">☀️</span> Switch to Light Theme
             </button>
         </header>
 
         <main class="app-layout">
-                <!-- Tangent Line Simulation -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Tangent Line Analysis</h2>
-                        <span class="category">Kinematics</span>
-                    </div>
-                    <p class="description">
-                        Plot data points, fit a parabola, and interactively analyze tangent lines at any point along the curve. 
-                        Perfect for exploring instantaneous velocity in motion experiments.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://vladimirlopez.github.io/slope_tangents/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/vladimirlopez/slope_tangents" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
-                </div>
+            <section class="panel full topics-nav" aria-label="Browse by topic">
+                <a class="topic-chip" href="#topic-mechanics">Mechanics</a>
+                <a class="topic-chip" href="#topic-waves">Waves</a>
+                <a class="topic-chip" href="#topic-electromagnetism">Electromagnetism</a>
+                <a class="topic-chip" href="#topic-optics">Optics</a>
+                <a class="topic-chip" href="#topic-astrophysics">Astrophysics</a>
+                <a class="topic-chip" href="#topic-analysis">Data Analysis</a>
+            </section>
 
-                <!-- Electrostatics Simulation -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Electrostatics: Conduction & Induction</h2>
-                        <span class="category">Electromagnetism</span>
-                    </div>
-                    <p class="description">
-                        Visualize how electrons move during charging by conduction and induction. 
-                        Charge a rod, bring it near pith balls, and observe induced and transferred charge effects.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://vladimirlopez.github.io/chargingDemo/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/vladimirlopez/chargingDemo" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+            <section class="panel topic-section" id="topic-mechanics">
+                <div class="topic-head">
+                    <h2>Mechanics</h2>
+                    <p>Motion, forces, and systems.</p>
                 </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Rocket Sled Simulation</h3>
+                            <span class="category">Kinematics</span>
+                        </div>
+                        <p class="description">Model one-dimensional rocket sled motion with adjustable thrust and force effects.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/rocket-sled-simulation/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/rocket-sled-simulation" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
 
-                <!-- Ripple Lab Studio -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Ripple Lab Studio</h2>
-                        <span class="category">Waves</span>
-                    </div>
-                    <p class="description">
-                        Explore wave interference patterns and ripple effects. 
-                        Create multiple wave sources and observe how they interact in real-time.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/ripple-lab-studio/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/ripple-lab-studio" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
-                </div>
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Atwood Machine</h3>
+                            <span class="category">Mechanics</span>
+                        </div>
+                        <p class="description">Explore force, acceleration, and direction changes in a classic two-mass pulley system.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/atwood-machine-simulation/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/atwood-machine-simulation" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
 
-                <!-- Speed of Sound Lab -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Speed of Sound Lab</h2>
-                        <span class="category">Waves</span>
-                    </div>
-                    <p class="description">
-                        Interactive lab simulation to measure the speed of sound using resonance in tubes. 
-                        Adjust tube length and observe standing wave patterns to calculate wave properties.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/speed-of-sound-lab-sim/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/speed-of-sound-lab-sim" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
-                </div>
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Half Atwood Machine</h3>
+                            <span class="category">Mechanics</span>
+                        </div>
+                        <p class="description">Investigate tension and acceleration in a mass-hanging, mass-on-table system.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/half-atwood-sim/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/half-atwood-sim" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
 
-                <!-- Rocket Sled -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Rocket Sled Simulation</h2>
-                        <span class="category">Kinematics</span>
-                    </div>
-                    <p class="description">
-                        Model the motion of a rocket sled with realistic physics. 
-                        Explore acceleration, velocity, and forces in one-dimensional motion with varying thrust.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/rocket-sled-simulation/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/rocket-sled-simulation" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
-                </div>
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Half Atwood Inquiry Lab</h3>
+                            <span class="category">Mechanics</span>
+                        </div>
+                        <p class="description">Discovery-first half Atwood lab with friction toggles and system-level reasoning prompts.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/half-atwood-inquiry-sim/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/half-atwood-inquiry-sim" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
 
-                <!-- Atwood Machine -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Atwood Machine</h2>
-                        <span class="category">Mechanics</span>
-                    </div>
-                    <p class="description">
-                        Classic two-mass pulley system with a twist: set initial velocity to explore how 
-                        acceleration and velocity can point in opposite directions. Watch the system slow down, stop, and reverse!
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/atwood-machine-simulation/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/atwood-machine-simulation" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Elevator Ride</h3>
+                            <span class="category">Mechanics</span>
+                        </div>
+                        <p class="description">Connect acceleration to apparent weight and net force in a realistic elevator ride context.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/elevator-ride-sim/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/elevator-ride-sim" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
                 </div>
+            </section>
 
-                <!-- Half Atwood Machine -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Half Atwood Machine</h2>
-                        <span class="category">Mechanics</span>
-                    </div>
-                    <p class="description">
-                        A mass hanging over a pulley connected to another mass on a horizontal surface. 
-                        Explore the relationship between tension, acceleration, and mass ratios in this asymmetric system.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/half-atwood-sim/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/half-atwood-sim" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+            <section class="panel topic-section" id="topic-waves">
+                <div class="topic-head">
+                    <h2>Waves</h2>
+                    <p>Interference, resonance, and wave behavior.</p>
                 </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Ripple Lab Studio</h3>
+                            <span class="category">Waves</span>
+                        </div>
+                        <p class="description">Create and combine wave sources to observe live interference patterns.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/ripple-lab-studio/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/ripple-lab-studio" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
 
-                <!-- Half Atwood Inquiry Lab -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Half Atwood Inquiry Lab</h2>
-                        <span class="category">Mechanics</span>
-                    </div>
-                    <p class="description">
-                        Discovery-focused half Atwood simulation for on-level physics. Toggle table friction, test
-                        system-level reasoning, and investigate when static friction prevents motion.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/half-atwood-inquiry-sim/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/half-atwood-inquiry-sim" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Speed of Sound Lab</h3>
+                            <span class="category">Waves</span>
+                        </div>
+                        <p class="description">Measure sound speed with resonance tubes and standing-wave structure.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/speed-of-sound-lab-sim/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/speed-of-sound-lab-sim" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
                 </div>
+            </section>
 
-                <!-- Stellar Evolution -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Stellar Evolution</h2>
-                        <span class="category">Astrophysics</span>
-                    </div>
-                    <p class="description">
-                        Visualize the life cycle of stars from main sequence to final stages. 
-                        Explore how mass determines stellar evolution pathways and final fates.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/stellar-evolution-simulation/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/stellar-evolution-simulation" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+            <section class="panel topic-section" id="topic-electromagnetism">
+                <div class="topic-head">
+                    <h2>Electromagnetism</h2>
+                    <p>Charge interactions and induction phenomena.</p>
                 </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Electrostatics: Conduction &amp; Induction</h3>
+                            <span class="category">Electricity</span>
+                        </div>
+                        <p class="description">Track electron motion and compare charge transfer by conduction versus induction.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://vladimirlopez.github.io/chargingDemo/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/vladimirlopez/chargingDemo" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-                <!-- Elevator Ride -->
-                <div class="panel sim-card">
-                    <div class="sim-header">
-                        <h2>Elevator Ride</h2>
-                        <span class="category">Mechanics</span>
-                    </div>
-                    <p class="description">
-                        Experience the physics of acceleration in an elevator. 
-                        Observe how apparent weight changes during acceleration, deceleration, and constant velocity motion.
-                    </p>
-                    <div class="sim-links button-row">
-                        <a href="https://thinking-experiment-sims.github.io/elevator-ride-sim/" class="btn btn-primary" target="_blank">
-                            Launch Simulation
-                        </a>
-                        <a href="https://github.com/Thinking-Experiment-Sims/elevator-ride-sim" class="btn btn-ghost" target="_blank">
-                            View Code
-                        </a>
-                    </div>
+            <section class="panel topic-section" id="topic-optics">
+                <div class="topic-head">
+                    <h2>Optics</h2>
+                    <p>Geometric optics and image formation.</p>
                 </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Image Location in Mirrors and Lenses Lab</h3>
+                            <span class="category">Optics</span>
+                        </div>
+                        <p class="description">Construct principal rays for lenses and mirrors, then predict and verify image location interactively.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://vladimirlopez.github.io/image-location-mirrors-lenses-sim/index.html" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/vladimirlopez/image-location-mirrors-lenses-sim" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel topic-section" id="topic-astrophysics">
+                <div class="topic-head">
+                    <h2>Astrophysics</h2>
+                    <p>Stellar life cycle and outcomes.</p>
+                </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Stellar Evolution</h3>
+                            <span class="category">Astrophysics</span>
+                        </div>
+                        <p class="description">Follow stellar pathways from main sequence to endpoints based on mass.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://thinking-experiment-sims.github.io/stellar-evolution-simulation/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/Thinking-Experiment-Sims/stellar-evolution-simulation" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel topic-section" id="topic-analysis">
+                <div class="topic-head">
+                    <h2>Data Analysis</h2>
+                    <p>Curve fitting and interpretation tools.</p>
+                </div>
+                <div class="topic-grid">
+                    <article class="sim-card">
+                        <div class="sim-header">
+                            <h3>Tangent Line Analysis</h3>
+                            <span class="category">Analysis</span>
+                        </div>
+                        <p class="description">Fit a parabola to data and inspect tangent behavior to connect slope and instantaneous rate.</p>
+                        <div class="sim-links button-row">
+                            <a href="https://vladimirlopez.github.io/slope_tangents/" class="btn btn-primary" target="_blank" rel="noopener">Launch Simulation</a>
+                            <a href="https://github.com/vladimirlopez/slope_tangents" class="btn btn-ghost" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
-        <footer class="panel" style="grid-column: span 12; text-align: center; margin-top: 1rem;">
+        <footer class="panel full footer-panel">
             <p class="info-line">
-                Built with ❤️ by 
-                <a href="https://vladimirlopez.github.io/the-thinking-experiment/" target="_blank" style="color: var(--gold-400); text-decoration: none;">The Thinking Experiment</a>
+                Built with ❤️ by
+                <a href="https://vladimirlopez.github.io/the-thinking-experiment/" target="_blank" rel="noopener" class="footer-link">The Thinking Experiment</a>
             </p>
-            <p class="info-line" style="margin-top: 0.3rem;">
-                All simulations are open source and free to use for educational purposes.
-            </p>
+            <p class="info-line" style="margin-top: 0.3rem;">All simulations are open source and free to use for educational purposes.</p>
         </footer>
     </div>
-    
+
     <script>
-        // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const themeLink = document.getElementById('theme-link');
-        const themeIcon = document.getElementById('theme-icon');
-        
+
         const DARK_THEME = 'https://cdn.jsdelivr.net/gh/vladimirlopez/shared-simulation-style-system@main/themes/dark-refraction-theme.css';
         const LIGHT_THEME = 'light-theme.css';
-        
-        // Load saved theme preference
+
         const savedTheme = localStorage.getItem('physics-sims-theme') || 'dark';
         if (savedTheme === 'light') {
             themeLink.href = LIGHT_THEME;
             themeToggle.innerHTML = '<span id="theme-icon">🌙</span> Switch to Dark Theme';
         }
-        
+
         themeToggle.addEventListener('click', () => {
             const isDark = themeLink.href.includes('dark-refraction-theme');
-            
             if (isDark) {
                 themeLink.href = LIGHT_THEME;
                 themeToggle.innerHTML = '<span id="theme-icon">🌙</span> Switch to Dark Theme';
