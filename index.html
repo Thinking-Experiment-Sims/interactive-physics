@@ -6,20 +6,21 @@
     <title>Physics Simulations - The Thinking Experiment</title>
     <meta name="description" content="Interactive physics simulations for teaching and learning">
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vladimirlopez/shared-simulation-style-system@main/themes/dark-refraction-theme.css" id="theme-link">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-theme="light">
     <div class="bg-grid"></div>
     <div class="shell">
-        <header class="hero">
-            <p class="kicker">The Thinking Experiment</p>
-            <h1>Physics Simulations</h1>
-            <p class="subtitle">Interactive tools for teaching and learning</p>
-            <button id="theme-toggle" class="ghost theme-toggle-btn">
-                <span id="theme-icon">☀️</span> Switch to Light Theme
-            </button>
-        </header>
+        <!-- ===== HERO ===== -->
+        <div class="hero">
+            <div class="hero-top">
+                <div>
+                    <p class="kicker">The Thinking Experiment</p>
+                    <h1>Physics Simulations</h1>
+                    <p class="subtitle">Interactive tools for teaching and learning</p>
+                </div>
+            </div>
+        </div>
 
         <main class="app-layout">
             <section class="panel full topics-nav" aria-label="Browse by topic">
@@ -297,40 +298,9 @@
             </section>
         </main>
 
-        <footer class="panel full footer-panel">
-            <p class="info-line">
-                Built with ❤️ by
-                <a href="https://vladimirlopez.github.io/the-thinking-experiment/" target="_blank" rel="noopener" class="footer-link">The Thinking Experiment</a>
-            </p>
-            <p class="info-line" style="margin-top: 0.3rem;">All simulations are open source and free to use for educational purposes.</p>
+        <footer>
+            <p>© 2026 Vladimir Lopez · The Thinking Experiment · Interactive Physics Simulations</p>
         </footer>
     </div>
-
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeLink = document.getElementById('theme-link');
-
-        const DARK_THEME = 'https://cdn.jsdelivr.net/gh/vladimirlopez/shared-simulation-style-system@main/themes/dark-refraction-theme.css';
-        const LIGHT_THEME = 'light-theme.css';
-
-        const savedTheme = localStorage.getItem('physics-sims-theme') || 'dark';
-        if (savedTheme === 'light') {
-            themeLink.href = LIGHT_THEME;
-            themeToggle.innerHTML = '<span id="theme-icon">🌙</span> Switch to Dark Theme';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = themeLink.href.includes('dark-refraction-theme');
-            if (isDark) {
-                themeLink.href = LIGHT_THEME;
-                themeToggle.innerHTML = '<span id="theme-icon">🌙</span> Switch to Dark Theme';
-                localStorage.setItem('physics-sims-theme', 'light');
-            } else {
-                themeLink.href = DARK_THEME;
-                themeToggle.innerHTML = '<span id="theme-icon">☀️</span> Switch to Light Theme';
-                localStorage.setItem('physics-sims-theme', 'dark');
-            }
-        });
-    </script>
 </body>
 </html>
