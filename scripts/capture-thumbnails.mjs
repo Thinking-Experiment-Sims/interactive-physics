@@ -37,9 +37,7 @@ const simulations = [
   { slug: 'electric-fields-sim', url: 'https://thinking-experiment-sims.github.io/electric-fields-sim/' },
   { slug: 'rainbow-prism-refraction-lab', url: 'https://thinking-experiment-sims.github.io/rainbow-prism-refraction-lab/' },
   { slug: 'image-location-mirrors-lenses-sim', url: 'https://vladimirlopez.github.io/image-location-mirrors-lenses-sim/index.html' },
-  { slug: 'physics-spectrometer-sim', url: 'https://thinking-experiment-sims.github.io/physics-spectrometer-sim/' },
   { slug: 'stellar-evolution-simulation', url: 'https://thinking-experiment-sims.github.io/stellar-evolution-simulation/' },
-  { slug: 'hydrogen-atom-simulation', url: 'https://thinking-experiment-sims.github.io/Hydrogen_atom_simulation/' },
   { slug: 'tangent-line-analysis', url: 'https://vladimirlopez.github.io/slope_tangents/' },
 ];
 
