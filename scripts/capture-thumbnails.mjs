@@ -38,6 +38,7 @@ const simulations = [
   { slug: 'rainbow-prism-refraction-lab', url: 'https://thinking-experiment-sims.github.io/rainbow-prism-refraction-lab/' },
   { slug: 'image-location-mirrors-lenses-sim', url: 'https://vladimirlopez.github.io/image-location-mirrors-lenses-sim/index.html' },
   { slug: 'stellar-evolution-simulation', url: 'https://thinking-experiment-sims.github.io/stellar-evolution-simulation/' },
+  { slug: 'icecube-neutrino-simulation', url: 'https://thinking-experiment-sims.github.io/icecube-neutrino-simulation/' },
   { slug: 'tangent-line-analysis', url: 'https://vladimirlopez.github.io/slope_tangents/' },
 ];
 
