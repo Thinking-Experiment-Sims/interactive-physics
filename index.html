@@ -22,7 +22,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-num">34</span>
+                    <span class="stat-num">35</span>
                     <span class="stat-label">Simulations</span>
                 </div>
                 <div class="stat-item">
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="view-controls">
-                    <span id="resultsBadge" class="results-badge">Showing 34 of 34</span>
+                    <span id="resultsBadge" class="results-badge">Showing 35 of 35</span>
                     <div class="view-toggle" role="group" aria-label="Layout View">
                         <button type="button" class="view-btn active" id="btnViewGrid" title="Visual Card Grid">
                             <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
@@ -65,8 +65,8 @@
 
             <!-- Category Filter Chips -->
             <div class="topic-chips" role="tablist">
-                <button type="button" class="filter-chip active" data-filter="all">All <span class="chip-count">33</span></button>
-                <button type="button" class="filter-chip" data-filter="mechanics">Mechanics <span class="chip-count">23</span></button>
+                <button type="button" class="filter-chip active" data-filter="all">All <span class="chip-count">35</span></button>
+                <button type="button" class="filter-chip" data-filter="mechanics">Mechanics <span class="chip-count">25</span></button>
                 <button type="button" class="filter-chip" data-filter="waves">Waves <span class="chip-count">2</span></button>
                 <button type="button" class="filter-chip" data-filter="electromagnetism">Electromagnetism <span class="chip-count">3</span></button>
                 <button type="button" class="filter-chip" data-filter="optics">Optics <span class="chip-count">2</span></button>
@@ -1156,6 +1156,24 @@
         const cards = Array.from(document.querySelectorAll('.sim-card'));
         const subtopicGroups = Array.from(document.querySelectorAll('.subtopic-group'));
         const topicSections = Array.from(document.querySelectorAll('.topic-section'));
+
+        // Dynamically initialize hero and filter counts from DOM cards to prevent discrepancies
+        const heroSimCountEl = document.querySelector('.hero-stats .stat-item:first-child .stat-num');
+        if (heroSimCountEl) {
+            heroSimCountEl.textContent = cards.length;
+        }
+
+        filterChips.forEach(chip => {
+            const filter = chip.getAttribute('data-filter');
+            const countSpan = chip.querySelector('.chip-count');
+            if (!countSpan) return;
+            if (filter === 'all') {
+                countSpan.textContent = cards.length;
+            } else {
+                const count = cards.filter(c => (c.getAttribute('data-topic') || '') === filter).length;
+                countSpan.textContent = count;
+            }
+        });
 
         let activeTopic = 'all';
 
